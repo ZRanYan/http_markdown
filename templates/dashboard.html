@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>文档主页</title>
+</head>
+
+<body>
+    <h1>欢迎来到知识库主页</h1> <!-- 一级标题 -->
+    <p>这是一个段落</p>
+    <br> <!-- 换行 -->
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <b>加粗</b>
+    <i>斜体</i>
+    <u>下划线</u>
+    <small>小字体</small>
+    <strong>强调（加粗）</strong>
+
+    <br> 
+    <img src="{{ url_for('static', filename='OIP.jpeg') }}" alt="描述文字" width="400">
+
+    <!-- 无序列表
+    <ul>  
+        <li><a href="{{ url_for('markdown_page', filename='document_main_1.md') }}">产品A技术总结</a></li>
+        <li><a href="{{ url_for('markdown_page', filename='document_main_2.md') }}">产品B技术总结</a></li>
+    </ul> -->
+    <ol>
+        <li><a href="{{ url_for('markdown_page', filename='document_main_1.md') }}">产品A技术总结</a></li>
+        <li><a href="{{ url_for('markdown_page', filename='document_main_2.md') }}">产品B技术总结</a></li>
+    </ol>
+</body>
+
+</html>

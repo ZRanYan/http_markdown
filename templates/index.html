@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+  <meta charset="UTF-8" />
+  <title>设备登录</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      background-color: #f2f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .login-container {
+      display: flex;
+      width: 600px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: white;
+    }
+
+    .left-panel {
+      background-color: #4285f4;
+      color: white;
+      width: 40%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 40px 20px;
+    }
+
+    .left-panel .emoji {
+      font-size: 48px;
+    }
+
+    .left-panel .welcome {
+      margin-top: 20px;
+      font-size: 24px;
+    }
+
+    .right-panel {
+      width: 60%;
+      padding: 40px 30px;
+    }
+
+    .right-panel h2 {
+      margin-bottom: 30px;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    form input {
+      padding: 10px;
+      margin-bottom: 20px;
+      font-size: 14px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+
+    form button {
+      padding: 10px;
+      background-color: #4285f4;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    form button:hover {
+      background-color: #3367d6;
+    }
+  </style>
+</head>
+<body>
+  <div class="login-container">
+    <div class="left-panel">
+      <div class="emoji">
+        <img src="{{ url_for('static', filename='index.svg') }}" alt="欢迎图标" style="width: 300px; height: 300px;">
+      </div>
+    </div>
+    <div class="right-panel">
+      <form action="/login" method="POST">
+        <h1>知识库登录</h1>
+        <input type="text" name="username" placeholder="👤 用户名" required>
+        <input type="password" name="password" placeholder="🔒 密码" required>
+        <button type="submit">登录</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

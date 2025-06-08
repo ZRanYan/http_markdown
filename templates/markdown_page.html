@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Markdown Documentation</title>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <link href="/static/default.css" rel="stylesheet">
+    <link href="/static/github.css" rel="stylesheet" type="text/css" />
+    <style>
+        .abc {
+            margin: 0 auto;
+            width: 720px;
+            border: 1px solid;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Markdown 内容</h1>
+    <div>
+        <!-- 渲染 Markdown 转换后的 HTML 内容 -->
+        {{ content|safe }}
+    </div>
+    <br>
+    <a href="/dashboard">返回首页</a>
+</body>
+
+</html>
